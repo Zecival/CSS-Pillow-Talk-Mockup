@@ -1,3 +1,75 @@
 body {
   background: papayawhip;
 }
+
+*:not(.cards, .left-display) {
+  border: 1px solid black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 100vh;
+  font-size: 2em;
+}
+
+.left-display {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 5;
+
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 90%;
+  margin: 0.5em;
+  flex-grow: 1;
+}
+
+.a, .f {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92.5%;
+  flex-grow: 1;
+  margin: 0.5em;
+}
+
+.b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 90%;
+  flex-grow: 5;
+  margin: 0.5em;
+}
+
+.cards > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+@media (min-width: 600px) {
+
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .left-display {
+    max-width: 80%;
+    min-width: 60%;
+  }
+
+  .f {
+    min-width: 20%;
+    max-width: 20%;
+  }
+}
